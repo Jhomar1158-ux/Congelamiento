@@ -32,3 +32,20 @@ console.log(prueba)
 // Eliminar el que tenga celery
 const notCelery=[...needThyme.slice(0,2),...needThyme.slice(3)]
 console.log(notCelery)
+
+// SORTING
+
+const items= Object.freeze(["ana","jhomar", "bernard","elias"]);
+
+const sortedItems = [...items].sort();
+console.log(sortedItems)
+
+// Si quisieramos ordenar algún ATRIBUTO haríamos:
+const prueba2={ item: 'butter', haveIngredient: true };
+console.log("****")
+// Puedo acceder a un valor a través del punto y el nombre del key
+console.log(prueba2.item);
+console.log("****")
+
+const sortedGroceries = [...groceryList].sort((a,b)=> a.item > b.item ? 1:-1);
+console.log(sortedGroceries)
