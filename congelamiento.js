@@ -49,3 +49,32 @@ console.log("****")
 
 const sortedGroceries = [...groceryList].sort((a,b)=> a.item > b.item ? 1:-1);
 console.log(sortedGroceries)
+
+// .MAP()
+
+const lista1 = ["uno","dos","tres"];
+// "e" sería el iterador de la lista, map nos devuelve una lista mejorada
+const lista1Li = lista1.map(e => `<li>${e}</li>`);
+console.log(lista1Li)
+
+const values = [1,2,3,5,7];
+const cubes = values.map( e => e**3);
+console.log(cubes)
+
+// .Filter()
+
+const values2 = [1,2,3,4,5,6];
+// "e" itera la lista y nos devuelve una lista que cumpla la condición de valores pares/evens
+const evens = values2.filter( e => e%2 ===0);
+console.log(evens)
+
+const groceries2 = ["pearl onions", "cremini mushrooms", "thyme"];
+// "item" sería el iterador. Retornamos una lista de elementos que incluyen la "o"
+const oFoods = groceries2.filter( item => item.includes("o") );
+console.log(oFoods)
+
+// Podemos hacer de Todo, siempre que devolvamos un TRUE o FALSE
+const values3 = [1, 2, 3, 4, 5];
+// Filtramos todos los impares, luego elevamos al cuadrado esos valores impares.
+const oddCubes = values3.filter( val => val % 2 !==0 ).map( val => val**3 );
+console.log(oddCubes)
